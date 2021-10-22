@@ -199,6 +199,7 @@ html,body{
 --------------------------------------*/
 #menu{
 	z-index: 999;
+	border-top: 3px solid rgb(0, 51, 153);
 }
 /* navbar-brand */
 .navbar-brand,
@@ -212,7 +213,8 @@ html,body{
 .wrapper-sticky{
 	position: relative;
 	display: inline-block;
-	background: rgba(0, 51, 153,1);
+	background: #FFF;
+	border-top: 3px solid rgba(0, 51, 153,1);
 }
 
 .price-text {
@@ -227,10 +229,17 @@ html,body{
 
 /* sticky */
 .sticky{
-	background: rgba(115,112,216,1);
-	padding: 10px 0px 0px;
-	height:80px;
-	color: #fff;
+	background: #FFF;
+	/* padding: 10px 0px 0px; */
+	border-top: 3px solid rgb(0, 51, 153);
+	border-bottom: 3px solid rgb(0, 51, 153);
+	height:110px;
+	color: rgb(0, 51, 153);
+	position: fixed;
+    top: 0;
+    overflow: hidden;
+    z-index: 10;
+    width: 100%;
 }
 
 .mt-imagens-clientes1 {
@@ -248,8 +257,8 @@ html,body{
 .sticky  .navbar-default .navbar-nav li a:active,
 .sticky  .navbar-default .navbar-nav li a:focus,
 .sticky  .navbar-default .navbar-nav li a:hover{
-	color: #fff;
-	margin: 0px 0px;
+	color: rgb(0, 51, 153);
+	margin: 20px 0px;
 }
 .sticky .navbar-default .navbar-toggle ,
 .sticky .navbar-default .navbar-toggle:focus,
@@ -268,7 +277,7 @@ html,body{
 }
 .navbar-default .navbar-nav li a{
 	font-size: 16px;
-	color: #fff;
+	color: rgb(0, 51, 153);
 	font-family: 'Lato', sans-serif;
 	margin-top:18px;
 	padding-left: 27px;
@@ -281,7 +290,7 @@ html,body{
 .navbar-default.navbar-nav li a:active,
 .navbar-default.navbar-nav li a:focus,
 .navbar-default .navbar-nav li a:hover{
-	color: #fff;
+	color: rgb(0, 51, 153);;
 	outline: 0;
 	font-weight:700;
 	margin-top:18px;
@@ -295,7 +304,7 @@ html,body{
 .navbar-default .navbar-nav > .active > a:focus,
 .navbar-default .navbar-nav > .active > a:hover {
 	background:transparent;
-    color: #fff;
+    color: rgb(0, 51, 153);;
 	font-weight:700;
 	font-family: 'Lato', sans-serif;
 	margin-top:18px;
@@ -922,13 +931,13 @@ a:focus.service-btn{
 	background: url(../../assets/images/team/team.jpg) no-repeat;
 }
 .team-box-bg-2{
-	background: url(../../assets/images/team/team3.jpg) no-repeat;
+	background: url(../../assets/images/team/team.jpg) no-repeat;
 }
 .team-box-bg-3{
-	background: url(../../assets/images/team/team2.jpg) no-repeat;
+	background: url(../../assets/images/team/team.jpg) no-repeat;
 }
 .team-box-bg-4{
-	background: url(../../assets/images/team/team3.jpg) no-repeat;
+	background: url(../../assets/images/team/team.jpg) no-repeat;
 }/*team-box-bg*/
 
 

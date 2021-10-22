@@ -36,7 +36,7 @@ $(document).ready(function(){
 	
 	// 2 . hcsticky 
 
-		$('#menu').hcSticky();
+		// $('#menu').hcSticky();
 
 
 	// 3. counter

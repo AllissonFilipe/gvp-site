@@ -18,6 +18,8 @@ import { ServicosComponent } from './components/servicos/servicos.component';
 import { SobreComponent } from './components/sobre/sobre.component';
 import { HeaderSlideComponent } from './components/header-slide/header-slide.component';
 import { APP_BASE_HREF } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+// import { NgxMaskModule } from 'ngx-mask';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,10 @@ import { APP_BASE_HREF } from '@angular/common';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    // NgxMaskModule.forRoot()
   ],
   providers: [
     {provide: APP_BASE_HREF, useValue: '/'}

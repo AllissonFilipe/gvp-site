@@ -49,35 +49,35 @@
                         <div class="single-contact-box">
                             <div class="contact-form">
                                 <h3>Formulário de solicitação de estimativa</h3>
-                                <form>
+                                <form [formGroup]="formContact">
                                     <div class="row">
                                         <div class="col-sm-6 col-xs-12">
                                             <div class="form-group">
-                                                <input type="text" class="form-control" id="firstname" placeholder="Primeiro Nome" name="firstname">
+                                                <input type="text" formControlName="firstname" class="form-control" id="firstname" placeholder="Primeiro Nome" name="firstname">
                                             </div><!--/.form-group-->
                                         </div><!--/.col-->
                                         <div class="col-sm-6 col-xs-12">
                                             <div class="form-group">
-                                                <input type="text" class="form-control" id="lastname" placeholder="Último Nome" name="laststname">
+                                                <input type="text" formControlName="lastname" class="form-control" id="lastname" placeholder="Último Nome" name="laststname">
                                             </div><!--/.form-group-->
                                         </div><!--/.col-->
                                     </div><!--/.row-->
                                     <div class="row">
                                         <div class="col-sm-6 col-xs-12">
                                             <div class="form-group">
-                                                <input type="email" class="form-control" id="email" placeholder="Email" name="email">
+                                                <input type="email" formControlName="email" class="form-control" id="email" placeholder="Email" name="email">
                                             </div><!--/.form-group-->
                                         </div><!--/.col-->
                                         <div class="col-sm-6 col-xs-12">
                                             <div class="form-group">
-                                                <input type="text" class="form-control" id="phone" placeholder="Telefone" name="phone">
+                                                <input type="text" formControlName="phone" class="form-control" id="phone" placeholder="Telefone" name="phone">
                                             </div><!--/.form-group-->
                                         </div><!--/.col-->
                                     </div><!--/.row-->
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <div class="form-group">
-                                                <textarea class="form-control" rows="7" id="Comentário" placeholder="Mensagem" ></textarea>
+                                                <textarea class="form-control" formControlName="coment" rows="7" id="coment" placeholder="Mensagem" ></textarea>
                                             </div><!--/.form-group-->
                                         </div><!--/.col-->
                                     </div><!--/.row-->

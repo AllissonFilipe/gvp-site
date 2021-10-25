@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { ToastrService } from 'ngx-toastr';
+import { Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-contato',
@@ -9,8 +12,16 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class ContatoComponent implements OnInit {
 
   formContact: FormGroup
+  httpOptions = {
+    headers: new HttpHeaders({'Content-Type': 'application/json'})
+  };
+  @Output() eventLoading = new EventEmitter<boolean>();
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(
+    private formBuilder: FormBuilder,
+    private http: HttpClient,
+    private toastr: ToastrService
+  ) { }
 
   ngOnInit() {
     this.createForm();
@@ -26,4 +37,19 @@ export class ContatoComponent implements OnInit {
     })
   }
 
+  sendMail() {
+    this.eventLoading.emit(true);
+    this.http.post('http://localhost:3000/sendMail', this.formContact.value, this.httpOptions).subscribe(resp => {
+      if (resp) {
+        this.eventLoading.emit(false);
+        this.toastr.success('Contato Enviado com Sucesso !', 'Success');
+        this.formContact.reset();
+      }
+    }, (err: any) => {
+      console.log(err);
+      this.eventLoading.emit(false);
+      this.toastr.error('Não foi possível enviar o seu Contato', 'Error');
+      this.formContact.reset();
+    });
+  }
 }

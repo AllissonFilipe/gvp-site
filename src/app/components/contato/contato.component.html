@@ -84,7 +84,7 @@
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <div class="single-contact-btn pull-right">
-                                                <button class="contact-btn" type="button">Enviar Mensagem</button>
+                                                <button (click)="sendMail()" [disabled]="formContact.invalid" class="contact-btn" type="button">Enviar Mensagem</button>
                                             </div><!--/.single-single-contact-btn-->
                                         </div><!--/.col-->
                                     </div><!--/.row-->

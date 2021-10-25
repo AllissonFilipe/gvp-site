@@ -1391,6 +1391,23 @@ a:active.learn-btn{
 	-o-transition:.5s;
     transition: .5s;
 }
+.contact-form .single-contact-btn button:disabled{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	background: rgb(53, 87, 155);
+	height:50px;
+	width: 195px;
+	border:1px solid #fff;
+	text-transform:uppercase;
+	font-family: 'Poppins', sans-serif;
+	margin-top: 3px;
+	-webkit-transition: .5s; 
+	-moz-transition:.5s; 
+	-ms-transition:.5s; 
+	-o-transition:.5s;
+    transition: .5s;
+}
 .contact-form .single-contact-btn button.contact-btn ,
 .contact-form .single-contact-btn button.contact-btn:focus {
     margin-top:0px;
@@ -1412,6 +1429,12 @@ a:active.learn-btn{
 	color:rgb(0, 51, 153);
 	background:#fff;
 	border:1px solid rgb(0, 51, 153);
+}
+
+.single-contact-btn:hover button.contact-btn:disabled {
+	color: #fff;
+	background: rgb(53, 87, 155);
+	border:1px solid #fff;
 }
 
 /*--contct button--*/

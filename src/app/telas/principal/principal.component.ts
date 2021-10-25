@@ -8,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class PrincipalComponent implements OnInit {
 
   constructor() { }
+  loading = false;
 
   ngOnInit() {
+  }
+
+  setLoading(event) {
+    this.loading = event;
   }
 
 }

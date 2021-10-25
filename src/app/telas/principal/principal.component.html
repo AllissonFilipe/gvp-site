@@ -9,5 +9,10 @@
 <app-tabela-precos></app-tabela-precos>
 <app-testemunhos></app-testemunhos>
 <app-clientes></app-clientes>
-<app-contato></app-contato>
+<app-contato (eventLoading)="setLoading($event)"></app-contato>
 <app-footer></app-footer>
+
+
+<ngx-loading [show]="loading" [config]="{ 
+    backdropBackgroundColour: 'rgba(255,255,255,0.3)', backdropBorderRadius: '10px',
+    primaryColour: '#cc9900', secondaryColour: '#cc9900', tertiaryColour: '#cc9900', fullScreenBackdrop: true }"></ngx-loading>

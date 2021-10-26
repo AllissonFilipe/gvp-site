@@ -290,7 +290,7 @@ html,body{
 .navbar-default.navbar-nav li a:active,
 .navbar-default.navbar-nav li a:focus,
 .navbar-default .navbar-nav li a:hover{
-	color: rgb(0, 51, 153);;
+	color: rgb(0, 51, 153);
 	outline: 0;
 	font-weight:700;
 	margin-top:18px;
@@ -304,7 +304,7 @@ html,body{
 .navbar-default .navbar-nav > .active > a:focus,
 .navbar-default .navbar-nav > .active > a:hover {
 	background:transparent;
-    color: rgb(0, 51, 153);;
+    color: rgb(0, 51, 153);
 	font-weight:700;
 	font-family: 'Lato', sans-serif;
 	margin-top:18px;
@@ -762,6 +762,7 @@ a:focus.service-btn{
     display: flex;
     margin-bottom:30px;
 	height: 75px;
+	justify-content: center;
 }
 /* single-ststistics-box */
 .statistics-content {

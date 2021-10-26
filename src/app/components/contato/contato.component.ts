@@ -33,7 +33,8 @@ export class ContatoComponent implements OnInit {
       'lastname': [null, Validators.required],
       'email': [null, Validators.required],
       'phone': [null, Validators.required],
-      'coment': [null, Validators.required]
+      'coment': [null, Validators.required],
+      'recaptcha': [null, Validators.required]
     })
   }
 
@@ -51,5 +52,12 @@ export class ContatoComponent implements OnInit {
       this.toastr.error('Não foi possível enviar o seu Contato', 'Error');
       this.formContact.reset();
     });
+  }
+
+  resolved($event) {
+  }
+
+  errored() {
+    console.warn(`reCAPTCHA error encountered`);
   }
 }

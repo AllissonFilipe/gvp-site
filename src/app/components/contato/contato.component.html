@@ -22,7 +22,7 @@
                                         <div class="contact-online-address">
                                             <div class="single-online-address">
                                                 <i class="fa fa-phone"></i>
-                                                (81) 3028-1351
+                                                (81) 3028-1351 / (81) 99777-0889
                                             </div><!--/.single-online-address-->
                                             
                                             <div class="single-online-address">
@@ -83,6 +83,19 @@
                                     </div><!--/.row-->
                                     <div class="row">
                                         <div class="col-sm-12">
+                                            <div class="single-contact-recaptcha pull-right">
+                                                <re-captcha formControlName="recaptcha"
+                                                (resolved)="resolved($event)"
+                                                (error)="errored($event)"
+                                                errorMode="handled"
+                                                siteKey="6Ld15_YcAAAAAEYCjfRkbdPHHh6rjOZ6udMVvv46"
+                                                ></re-captcha>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-sm-12 mt-2">
                                             <div class="single-contact-btn pull-right">
                                                 <button (click)="sendMail()" [disabled]="formContact.invalid" class="contact-btn" type="button">Enviar Mensagem</button>
                                             </div><!--/.single-single-contact-btn-->

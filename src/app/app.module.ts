@@ -24,6 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxLoadingModule } from 'ngx-loading';
+import { LinksComponent } from './telas/links/links.component';
+import { RecaptchaModule, RecaptchaFormsModule  } from "ng-recaptcha";
 
 @NgModule({
   declarations: [
@@ -41,7 +43,8 @@ import { NgxLoadingModule } from 'ngx-loading';
     EstatisticasComponent,
     ServicosComponent,
     SobreComponent,
-    HeaderSlideComponent
+    HeaderSlideComponent,
+    LinksComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +54,9 @@ import { NgxLoadingModule } from 'ngx-loading';
     HttpClientModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
-    NgxLoadingModule.forRoot({})
+    NgxLoadingModule.forRoot({}),
+    RecaptchaModule,
+    RecaptchaFormsModule
     // NgxMaskModule.forRoot()
   ],
   providers: [

@@ -31,7 +31,7 @@ export class ContatoComponent implements OnInit {
     this.formContact = this.formBuilder.group({
       'firstname' : [null, Validators.required],
       'lastname': [null, Validators.required],
-      'email': [null, Validators.required],
+      'email': [null, Validators.required, Validators.email],
       'phone': [null, Validators.required],
       'coment': [null, Validators.required],
       'recaptcha': [null, Validators.required]
@@ -40,7 +40,7 @@ export class ContatoComponent implements OnInit {
 
   sendMail() {
     this.eventLoading.emit(true);
-    this.http.post('http://localhost:3000/sendMail', this.formContact.value, this.httpOptions).subscribe(resp => {
+    this.http.post('https://gvp-backend.herokuapp.com/sendMail', this.formContact.value, this.httpOptions).subscribe(resp => {
       if (resp) {
         this.eventLoading.emit(false);
         this.toastr.success('Contato Enviado com Sucesso !', 'Success');
@@ -56,6 +56,14 @@ export class ContatoComponent implements OnInit {
 
   resolved($event) {
   }
+
+  getPhoneMask(): string {
+    return this.isTelephone() ? '(00) 0000-00009' : '(00) 00000-0000';
+ }
+
+  isTelephone(): boolean {
+  return this.formContact.get('phone').value == null ? true : this.formContact.get('phone').value.toString().length < 11 ? true : false;
+ }
 
   errored() {
     console.warn(`reCAPTCHA error encountered`);

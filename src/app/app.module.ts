@@ -26,6 +26,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxLoadingModule } from 'ngx-loading';
 import { LinksComponent } from './telas/links/links.component';
 import { RecaptchaModule, RecaptchaFormsModule  } from "ng-recaptcha";
+import { NgxMaskModule } from 'ngx-mask'
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { RecaptchaModule, RecaptchaFormsModule  } from "ng-recaptcha";
     ToastrModule.forRoot(),
     NgxLoadingModule.forRoot({}),
     RecaptchaModule,
-    RecaptchaFormsModule
+    RecaptchaFormsModule,
+    NgxMaskModule.forRoot(),
     // NgxMaskModule.forRoot()
   ],
   providers: [

@@ -65,7 +65,7 @@ export class ContatoComponent implements OnInit {
   return this.formContact.get('phone').value == null ? true : this.formContact.get('phone').value.toString().length < 11 ? true : false;
  }
 
-  errored() {
+  errored(event) {
     console.warn(`reCAPTCHA error encountered`);
   }
 }

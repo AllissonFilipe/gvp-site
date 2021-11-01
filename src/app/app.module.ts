@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PrincipalComponent } from './telas/principal/principal.component';
@@ -19,7 +18,6 @@ import { SobreComponent } from './components/sobre/sobre.component';
 import { HeaderSlideComponent } from './components/header-slide/header-slide.component';
 import { APP_BASE_HREF } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-// import { NgxMaskModule } from 'ngx-mask';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -27,6 +25,7 @@ import { NgxLoadingModule } from 'ngx-loading';
 import { LinksComponent } from './telas/links/links.component';
 import { RecaptchaModule, RecaptchaFormsModule  } from "ng-recaptcha";
 import { NgxMaskModule } from 'ngx-mask'
+import { MapaComponent } from './components/mapa/mapa.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +44,8 @@ import { NgxMaskModule } from 'ngx-mask'
     ServicosComponent,
     SobreComponent,
     HeaderSlideComponent,
-    LinksComponent
+    LinksComponent,
+    MapaComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +59,6 @@ import { NgxMaskModule } from 'ngx-mask'
     RecaptchaModule,
     RecaptchaFormsModule,
     NgxMaskModule.forRoot(),
-    // NgxMaskModule.forRoot()
   ],
   providers: [
     {provide: APP_BASE_HREF, useValue: '/'}

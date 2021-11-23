@@ -68,4 +68,15 @@ export class ContatoComponent implements OnInit {
   errored(event) {
     console.warn(`reCAPTCHA error encountered`);
   }
+
+  formContactIsDisabled() {
+    return (
+      !this.formContact.get("firstname").value ||
+      !this.formContact.get("lastname").value ||
+      !this.formContact.get("email").value ||
+      !this.formContact.get("phone").value ||
+      !this.formContact.get("coment").value ||
+      !this.formContact.get("recaptcha").value
+    )
+  }
 }

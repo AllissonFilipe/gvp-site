@@ -26,12 +26,12 @@ $(document).ready(function(){
 				$('.return-to-top').fadeOut();
 			}
 		});
-		$('.return-to-top').on('click',function(){
-				$('html, body').animate({
-				scrollTop: 0
-			}, 1500);
-			return false;
-		});
+		// $('.return-to-top').on('click',function(){
+		// 		$('html, body').animate({
+		// 		scrollTop: 0
+		// 	}, 1500);
+		// 	return false;
+		// });
 	
 	
 	// 2 . hcsticky 
@@ -172,7 +172,7 @@ $(document).ready(function(){
             var anchor = $(this);
             $('html, body').stop().animate({
                 scrollTop: $(anchor.attr('href')).offset().top - -1
-            }, 1200,'easeInOutExpo');
+            }, 700,'easeInOutExpo');
         });
         
         $('body').scrollspy({

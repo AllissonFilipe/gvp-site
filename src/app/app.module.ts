@@ -26,6 +26,7 @@ import { LinksComponent } from './telas/links/links.component';
 import { RecaptchaModule, RecaptchaFormsModule  } from "ng-recaptcha";
 import { NgxMaskModule } from 'ngx-mask'
 import { MapaComponent } from './components/mapa/mapa.component';
+import { AdsenseModule } from 'ng2-adsense';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,10 @@ import { MapaComponent } from './components/mapa/mapa.component';
     RecaptchaModule,
     RecaptchaFormsModule,
     NgxMaskModule.forRoot(),
+    AdsenseModule.forRoot({
+      adClient: 'ca-pub-1714046511940371',
+      adSlot: 5591331167,
+    }),
   ],
   providers: [
     {provide: APP_BASE_HREF, useValue: '/'}

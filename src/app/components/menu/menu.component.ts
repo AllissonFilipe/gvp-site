@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -12,7 +13,7 @@ export class MenuComponent implements OnInit, AfterViewInit {
   sticky: boolean = false;
   elementPosition: any;
 
-  constructor() { }
+  constructor(private router: Router,) { }
 
   ngOnInit() {
   }
@@ -29,5 +30,9 @@ export class MenuComponent implements OnInit, AfterViewInit {
       } else {
         this.sticky = false;
       }
+  }
+
+  redirectToLinks() {
+    this.router.navigate([]).then(result => {  window.open('/links', '_blank'); });
   }
 }

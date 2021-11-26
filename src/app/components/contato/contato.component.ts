@@ -43,13 +43,13 @@ export class ContatoComponent implements OnInit {
     this.http.post('https://gvp-backend.herokuapp.com/sendMail', this.formContact.value, this.httpOptions).subscribe(resp => {
       if (resp) {
         this.eventLoading.emit(false);
-        this.toastr.success('Contato Enviado com Sucesso !', 'Success');
+        this.toastr.success('Contato Enviado !', 'Sucesso');
         this.formContact.reset();
       }
     }, (err: any) => {
       console.log(err);
       this.eventLoading.emit(false);
-      this.toastr.error('Não foi possível enviar o seu Contato', 'Error');
+      this.toastr.error('Não foi possível enviar o seu Contato', 'Erro');
       this.formContact.reset();
     });
   }

@@ -55,7 +55,7 @@ $(document).ready(function(){
 		
 		var owl=$('.team-carousel');
 		owl.owlCarousel({
-			items:4,
+			items:2,
 			margin:0,
 			
 			loop:true,
@@ -75,13 +75,13 @@ $(document).ready(function(){
 					},
 					640:{
 						items:2
-					},
-					768:{
-						items:3
-					},
-					992:{
-						items:4
 					}
+					// 768:{
+					// 	items:3
+					// },
+					// 992:{
+					// 	items:4
+					// }
 				}
 			
 			

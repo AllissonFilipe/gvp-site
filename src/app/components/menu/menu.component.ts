@@ -1,38 +1,17 @@
-import { AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css']
 })
-export class MenuComponent implements OnInit, AfterViewInit {
-
-  @ViewChild('stickyMenu', {static: false}) menuElement: ElementRef;
+export class MenuComponent implements OnInit {
 
   sticky: boolean = false;
   elementPosition: any;
 
-  constructor(private router: Router,) { }
+  constructor() { }
 
   ngOnInit() {
-  }
-
-  ngAfterViewInit(){
-    this.elementPosition = this.menuElement.nativeElement.offsetTop;
-  }
-
-  @HostListener('window:scroll', [])
-    handleScroll(){
-      const windowScroll = window.pageYOffset;
-      if(windowScroll >= this.elementPosition){
-        this.sticky = true;
-      } else {
-        this.sticky = false;
-      }
-  }
-
-  redirectToLinks() {
-    this.router.navigate([]).then(result => {  window.open('/links', '_blank'); });
   }
 }

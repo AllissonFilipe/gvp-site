@@ -27,6 +27,8 @@ import { RecaptchaModule, RecaptchaFormsModule  } from "ng-recaptcha";
 import { NgxMaskModule } from 'ngx-mask'
 import { MapaComponent } from './components/mapa/mapa.component';
 import { AdsenseModule } from 'ng2-adsense';
+import { DynamicScriptLoaderService } from './services/DynamicScriptLoaderService.service';
+import { BodyComponent } from './components/body/body.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,8 @@ import { AdsenseModule } from 'ng2-adsense';
     SobreComponent,
     HeaderSlideComponent,
     LinksComponent,
-    MapaComponent
+    MapaComponent,
+    BodyComponent
   ],
   imports: [
     BrowserModule,
@@ -66,7 +69,8 @@ import { AdsenseModule } from 'ng2-adsense';
     }),
   ],
   providers: [
-    {provide: APP_BASE_HREF, useValue: '/'}
+    {provide: APP_BASE_HREF, useValue: '/'},
+    DynamicScriptLoaderService
   ],
   bootstrap: [AppComponent]
 })

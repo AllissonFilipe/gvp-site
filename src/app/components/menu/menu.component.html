@@ -1,39 +1,18 @@
-<!--menu start-->
-<section id="menu" #stickyMenu
-[class.sticky] = "sticky">
-    <div class="container">
-        <div class="menubar">
-            <nav class="navbar navbar-default">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.html">
-                        <img class="img-adeq" src="/assets/images/logo/logo3.png" alt="logo">
-                    </a>
-                </div><!--/.navbar-header -->
+ <!-- ======= Hero Section ======= -->
+ <section id="hero" class="clearfix">
+    <div class="container" data-aos="fade-up">
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="smooth-menu">
-                            <a href="#home">Home</a>
-                        </li>
-                        <li class="smooth-menu"><a href="#about">Sobre</a></li>
-                        <li class="smooth-menu"><a href="#service">Serviços</a></li>
-                        <li class="smooth-menu"><a href="#project">Fotos</a></li>
-                        <li class="smooth-menu"><a href="#team">Time</a></li>
-                        <li class="smooth-menu"><a href="#contact">Contato</a></li>
-                        <li class="smooth-menu pointer"><a (click)="redirectToLinks()">Links úteis</a></li>
-                    </ul><!-- / ul -->
-                </div><!-- /.navbar-collapse -->
-            </nav><!--/nav -->
-        </div><!--/.menubar -->
-    </div><!-- /.container -->
+      <div class="hero-img" data-aos="zoom-out" data-aos-delay="200">
+        <img src="assets/img/hero-img.svg" alt="" class="img-fluid">
+      </div>
 
-</section><!--/#menu-->
-<!--menu end-->
+      <div class="hero-info" data-aos="zoom-in" data-aos-delay="100">
+        <h2>Nós provemos<br><span>soluções contábeis</span><br>para o seu negócio!</h2>
+        <div>
+          <a href="#about" class="btn-get-started scrollto">Iniciar</a>
+          <a href="#services" class="btn-services scrollto">Nossos Serviços</a>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End Hero Section -->

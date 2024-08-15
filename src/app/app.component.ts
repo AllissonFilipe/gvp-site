@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnChanges } from '@angular/core';
+import { Component } from '@angular/core';
 import { DynamicScriptLoaderService } from './services/DynamicScriptLoaderService.service';
 
 @Component({
@@ -6,23 +6,18 @@ import { DynamicScriptLoaderService } from './services/DynamicScriptLoaderServic
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements AfterViewInit, OnChanges {
+export class AppComponent {
   title = 'gvpcontabilidade';
 
-  constructor(private dynamicScriptLoader: DynamicScriptLoaderService) { }
-
-  ngAfterViewInit() {
-    this.loadScripts();
-  }
-
-  ngOnChanges(): void {
+  constructor(private dynamicScriptLoader: DynamicScriptLoaderService) { 
     this.loadScripts();
   }
 
   private loadScripts() {
     // You can load multiple scripts by just providing the key as argument into load method of the service
-    this.dynamicScriptLoader.load('vanillaJs','aosJs','bootstrapJs','glightboxJs','isotopeJs','swiperJs','mainJs').then(data => {
+    this.dynamicScriptLoader.load('vanillaJs','aosJs','bootstrapJs','glightboxJs','isotopeJs','swiperJs').then(data => {
       // Script Loaded Successfully
+      this.dynamicScriptLoader.load('mainJs').then(data => {}).catch(error => console.log(error));
     }).catch(error => console.log(error));
   }
 }

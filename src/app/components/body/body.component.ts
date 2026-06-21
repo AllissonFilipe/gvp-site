@@ -10,11 +10,11 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class BodyComponent implements OnInit {
 
-    formContact: FormGroup
-    httpOptions = {
-      headers: new HttpHeaders({'Content-Type': 'application/json'})
-    };
-    @Output() eventLoading = new EventEmitter<boolean>();
+  formContact: FormGroup
+  httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  };
+  @Output() eventLoading = new EventEmitter<boolean>();
 
   constructor(
     private formBuilder: FormBuilder,
@@ -27,8 +27,8 @@ export class BodyComponent implements OnInit {
 
   createForm() {
     this.formContact = this.formBuilder.group({
-      'firstname' : [null, Validators.required],
-      'lastname' : [null, Validators.required],
+      'firstname': [null, Validators.required],
+      'lastname': [null, Validators.required],
       'email': [null, Validators.required, Validators.email],
       'phone': [null, Validators.required],
       'coment': [null, Validators.required],
@@ -39,7 +39,7 @@ export class BodyComponent implements OnInit {
 
   sendMail() {
     this.eventLoading.emit(true);
-    this.http.post('https://gvp-backend.onrender.com/sendMail', this.formContact.value, this.httpOptions).subscribe(resp => {
+    this.http.post('https://gvp-backend.vercel.app/sendMail', this.formContact.value, this.httpOptions).subscribe(resp => {
       if (resp) {
         this.eventLoading.emit(false);
         this.toastr.success('Contato Enviado !', 'Sucesso');
@@ -58,11 +58,11 @@ export class BodyComponent implements OnInit {
 
   getPhoneMask(): string {
     return this.isTelephone() ? '(00) 0000-00009' : '(00) 00000-0000';
- }
+  }
 
   isTelephone(): boolean {
-  return this.formContact.get('phone').value == null ? true : this.formContact.get('phone').value.toString().length < 11 ? true : false;
- }
+    return this.formContact.get('phone').value == null ? true : this.formContact.get('phone').value.toString().length < 11 ? true : false;
+  }
 
   errored(event) {
     console.warn(`reCAPTCHA error encountered`);

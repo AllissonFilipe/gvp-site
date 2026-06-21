@@ -32,7 +32,8 @@ export class BodyComponent implements OnInit {
       'email': [null, Validators.required, Validators.email],
       'phone': [null, Validators.required],
       'coment': [null, Validators.required],
-      'recaptcha': [null, Validators.required]
+      'recaptcha': [null, Validators.required],
+      'consent': [false, Validators.requiredTrue]
     })
   }
 
@@ -74,7 +75,8 @@ export class BodyComponent implements OnInit {
       !this.formContact.get("email").value ||
       !this.formContact.get("phone").value ||
       !this.formContact.get("coment").value ||
-      !this.formContact.get("recaptcha").value
+      !this.formContact.get("recaptcha").value ||
+      !this.formContact.get("consent").value
     )
   }
 

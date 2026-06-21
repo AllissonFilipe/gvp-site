@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap mapping
+Sitemap: https://gvpcontabilidade.com.br/sitemap.xml

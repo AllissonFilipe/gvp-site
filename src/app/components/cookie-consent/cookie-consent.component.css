@@ -1,0 +1,121 @@
+.cookie-banner {
+  position: fixed;
+  bottom: -150px; /* Hidden initially */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 900px;
+  background: rgba(0, 34, 68, 0.95); /* Deep dark blue matching GVP */
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(204, 153, 0, 0.3); /* Gold accent border */
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  z-index: 99999;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  opacity: 0;
+  padding: 18px 24px;
+}
+
+.cookie-banner.show {
+  bottom: 30px; /* Floating slightly above the bottom */
+  opacity: 1;
+}
+
+.cookie-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.cookie-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 1;
+}
+
+.cookie-icon {
+  font-size: 24px;
+  color: #cc9900; /* Gold */
+  display: flex;
+  align-items: center;
+}
+
+.cookie-text {
+  color: #ffffff;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.cookie-link {
+  color: #cc9900;
+  text-decoration: underline;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.cookie-link:hover {
+  color: #ffcc33;
+}
+
+.cookie-actions {
+  display: flex;
+  align-items: center;
+}
+
+.btn-accept {
+  background: #cc9900; /* Gold */
+  color: #002244; /* Dark Blue text */
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  box-shadow: 0 4px 10px rgba(204, 153, 0, 0.2);
+}
+
+.btn-accept:hover {
+  background: #ffcc33;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(204, 153, 0, 0.4);
+}
+
+.btn-accept:active {
+  transform: translateY(0);
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+  .cookie-banner {
+    bottom: -250px;
+    padding: 15px;
+  }
+  
+  .cookie-banner.show {
+    bottom: 15px;
+  }
+
+  .cookie-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .cookie-content {
+    align-items: flex-start;
+  }
+
+  .cookie-actions {
+    justify-content: flex-end;
+  }
+  
+  .btn-accept {
+    width: 100%;
+    text-align: center;
+  }
+}

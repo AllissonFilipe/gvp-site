@@ -1,0 +1,15 @@
+<div class="cookie-banner" [class.show]="showBanner">
+  <div class="cookie-container">
+    <div class="cookie-content">
+      <div class="cookie-icon">
+        <i class="bi bi-shield-fill-check"></i>
+      </div>
+      <p class="cookie-text">
+        Nós utilizamos cookies e tecnologias semelhantes para melhorar a sua experiência, otimizar o desempenho do site e analisar a navegação em conformidade com a LGPD. Ao continuar navegando, você concorda com a nossa <a routerLink="/politica-de-privacidade" class="cookie-link">Política de Privacidade</a>.
+      </p>
+    </div>
+    <div class="cookie-actions">
+      <button class="btn-accept" (click)="acceptConsent()">Aceitar</button>
+    </div>
+  </div>
+</div>

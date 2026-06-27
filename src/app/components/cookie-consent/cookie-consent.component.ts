@@ -18,9 +18,6 @@ export class CookieConsentComponent implements OnInit {
       setTimeout(() => {
         this.showBanner = true;
       }, 1500);
-    } else {
-      // Consent was previously given — load third-party scripts immediately
-      this.loadThirdPartyScripts();
     }
   }
 
@@ -31,18 +28,5 @@ export class CookieConsentComponent implements OnInit {
     };
     localStorage.setItem('gvpCookieConsent', JSON.stringify(consentData));
     this.showBanner = false;
-    this.loadThirdPartyScripts();
-  }
-
-  private loadThirdPartyScripts() {
-    // Load Google AdSense only after explicit consent
-    if (!document.getElementById('adsense-script')) {
-      const script = document.createElement('script');
-      script.id = 'adsense-script';
-      script.async = true;
-      script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1714046511940371';
-      script.crossOrigin = 'anonymous';
-      document.head.appendChild(script);
-    }
   }
 }

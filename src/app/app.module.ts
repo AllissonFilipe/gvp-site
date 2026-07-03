@@ -6,15 +6,6 @@ import { PrincipalComponent } from './telas/principal/principal.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MenuComponent } from './components/menu/menu.component';
-import { ClientesComponent } from './components/clientes/clientes.component';
-import { TestemunhosComponent } from './components/testemunhos/testemunhos.component';
-import { TabelaPrecosComponent } from './components/tabela-precos/tabela-precos.component';
-import { TimeComponent } from './components/time/time.component';
-import { FotosComponent } from './components/fotos/fotos.component';
-import { EstatisticasComponent } from './components/estatisticas/estatisticas.component';
-import { ServicosComponent } from './components/servicos/servicos.component';
-import { SobreComponent } from './components/sobre/sobre.component';
-import { HeaderSlideComponent } from './components/header-slide/header-slide.component';
 import { APP_BASE_HREF } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -24,7 +15,6 @@ import { NgxLoadingModule } from 'ngx-loading';
 import { LinksComponent } from './telas/links/links.component';
 import { RecaptchaModule, RecaptchaFormsModule } from "ng-recaptcha";
 import { NgxMaskModule } from 'ngx-mask'
-import { MapaComponent } from './components/mapa/mapa.component';
 import { AdsenseModule } from 'ng2-adsense';
 import { DynamicScriptLoaderService } from './services/DynamicScriptLoaderService.service';
 import { BodyComponent } from './components/body/body.component';
@@ -39,17 +29,7 @@ import { CookieConsentComponent } from './components/cookie-consent/cookie-conse
     HeaderComponent,
     FooterComponent,
     MenuComponent,
-    ClientesComponent,
-    TestemunhosComponent,
-    TabelaPrecosComponent,
-    TimeComponent,
-    FotosComponent,
-    EstatisticasComponent,
-    ServicosComponent,
-    SobreComponent,
-    HeaderSlideComponent,
     LinksComponent,
-    MapaComponent,
     BodyComponent,
     PoliticaPrivacidadeComponent,
     TermosUsoComponent,

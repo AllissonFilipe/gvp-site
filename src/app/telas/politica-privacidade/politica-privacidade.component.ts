@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SeoService } from '../../services/seo.service';
 
 @Component({
   selector: 'app-politica-privacidade',
@@ -63,7 +64,14 @@ import { Component, OnInit } from '@angular/core';
 export class PoliticaPrivacidadeComponent implements OnInit {
   currentYear: number = new Date().getFullYear();
 
+  constructor(private seoService: SeoService) {}
+
   ngOnInit() {
     window.scrollTo(0, 0);
+    this.seoService.updateSeo({
+      title: 'Política de Privacidade | GVP Contabilidade',
+      description: 'Leia a Política de Privacidade da GVP Contabilidade. Saiba como seus dados pessoais são coletados, usados e protegidos em conformidade com a LGPD.',
+      canonicalUrl: 'https://gvpcontabilidade.com.br/politica-de-privacidade'
+    });
   }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SeoService } from '../../services/seo.service';
 
 @Component({
   selector: 'app-termos-uso',
@@ -63,7 +64,14 @@ import { Component, OnInit } from '@angular/core';
 export class TermosUsoComponent implements OnInit {
   currentYear: number = new Date().getFullYear();
 
+  constructor(private seoService: SeoService) {}
+
   ngOnInit() {
     window.scrollTo(0, 0);
+    this.seoService.updateSeo({
+      title: 'Termos de Uso | GVP Contabilidade',
+      description: 'Leia os Termos de Uso do site da GVP Contabilidade. Conheça as regras e condições de utilização dos nossos serviços e conteúdos.',
+      canonicalUrl: 'https://gvpcontabilidade.com.br/termos-de-uso'
+    });
   }
 }

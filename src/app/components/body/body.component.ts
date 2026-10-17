@@ -16,6 +16,8 @@ export class BodyComponent implements OnInit {
   };
   @Output() eventLoading = new EventEmitter<boolean>();
 
+  yearsOfExperience: number = new Date().getFullYear() - 2008;
+
   constructor(
     private formBuilder: FormBuilder,
     private http: HttpClient,
@@ -29,7 +31,7 @@ export class BodyComponent implements OnInit {
     this.formContact = this.formBuilder.group({
       'firstname': [null, Validators.required],
       'lastname': [null, Validators.required],
-      'email': [null, Validators.required, Validators.email],
+      'email': [null, [Validators.required, Validators.email]],
       'phone': [null, Validators.required],
       'coment': [null, Validators.required],
       'recaptcha': [null, Validators.required],

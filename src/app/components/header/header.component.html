@@ -6,17 +6,29 @@
         <a routerLink="/"><img src="assets/images/logo/logo3.png" alt="Logo GVP Contabilidade" class="img-fluid"></a>
       </div>
 
-      <nav id="navbar" class="navbar">
+      <nav id="navbar" class="navbar" [class.navbar-mobile]="isMobileNavOpen">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">Sobre</a></li>
-          <li><a class="nav-link scrollto" href="#services">Serviços</a></li>
-          <li><a class="nav-link scrollto" href="#portfolio">Portfólio</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contato</a></li>
-          <li><a class="nav-link scrollto" href="https://gvp.enotafiscaleletronica.com.br/gvp" target="_blank">Portal do Cliente</a></li>
-          <li><a class="nav-link scrollto" href="#" (click)="redirectToLinks()">Links Úteis</a></li>
+          <li><a class="nav-link scrollto active" href="#hero" (click)="closeMobileNav()">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about" (click)="closeMobileNav()">Sobre</a></li>
+          <li><a class="nav-link scrollto" href="#services" (click)="closeMobileNav()">Serviços</a></li>
+          <li><a class="nav-link scrollto" href="#why-us" (click)="closeMobileNav()">Diferenciais</a></li>
+          <li><a class="nav-link scrollto" href="#portfolio" (click)="closeMobileNav()">Portfólio</a></li>
+          <li><a class="nav-link scrollto" href="#contact" (click)="closeMobileNav()">Contato</a></li>
+          <li><a class="nav-link portal-link" href="https://gvp.enotafiscaleletronica.com.br/gvp" target="_blank" (click)="closeMobileNav()"><i class="bi bi-box-arrow-up-right me-1"></i>Portal do Cliente</a></li>
+          <li><a class="nav-link" href="#" (click)="redirectToLinks()">Links Úteis</a></li>
+          <li class="d-none d-lg-block ms-2">
+            <a class="nav-btn-wpp" href="https://wa.me/5581994239353" target="_blank">
+              <i class="bi bi-whatsapp"></i> Fale Conosco
+            </a>
+          </li>
+          <!-- WhatsApp no menu mobile -->
+          <li class="d-lg-none mt-2 px-3">
+            <a class="nav-btn-wpp w-100 justify-content-center text-center" href="https://wa.me/5581994239353" target="_blank" (click)="closeMobileNav()">
+              <i class="bi bi-whatsapp me-2"></i> Fale Conosco
+            </a>
+          </li>
         </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
+        <i class="bi mobile-nav-toggle" [ngClass]="isMobileNavOpen ? 'bi-x' : 'bi-list'" (click)="toggleMobileNav()"></i>
       </nav><!-- .navbar -->
 
     </div>
